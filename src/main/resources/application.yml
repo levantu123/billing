@@ -1,0 +1,6 @@
+security:
+  oauth2:
+    resource:
+      user-info-uri: https://id.acb.com.vn/auth/realms/soba/protocol/openid-connect/userinfo
+server:
+  port: 18080
