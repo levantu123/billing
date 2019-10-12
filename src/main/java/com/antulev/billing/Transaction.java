@@ -22,9 +22,11 @@ public class Transaction {
 	private String description;
 	private double amountOfMoney;
 	private String moneySource;
-	private String node;
+	private String note;
 	private Date issuedTime;
-
+	private String owner; 
+	private String recursive;
+	private Date until;
 	public String getDescription() {
 		return description;
 	}
@@ -37,12 +39,7 @@ public class Transaction {
 	public void setAmountOfMoney(double amountOfMoney) {
 		this.amountOfMoney = amountOfMoney;
 	}
-	public String getNode() {
-		return node;
-	}
-	public void setNode(String node) {
-		this.node = node;
-	}
+	
 	public Date getIssuedTime() {
 		return issuedTime;
 	}
@@ -60,5 +57,37 @@ public class Transaction {
 	}
 	public void setMoneySource(String moneySource) {
 		this.moneySource = moneySource;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
+
+	public String getRecursive() {
+		return recursive;
+	}
+
+	public void setRecursive(String recursive) {
+		this.recursive = recursive;
+	}
+
+	public Date getUntil() {
+		return until;
+	}
+
+	public void setUntil(Date until) {
+		this.until = until;
 	}	
 }

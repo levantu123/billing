@@ -8,5 +8,5 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public interface TransactionRepository extends MongoRepository<Transaction, String>{
-	List<Transaction> findByissuedTimeBetween(@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)@Param("start")Date start, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)@Param("end") Date end);
+	List<Transaction> findByOwnerAndIssuedTimeBetween(String owner, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)@Param("start")Date start, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)@Param("end") Date end);
 }
